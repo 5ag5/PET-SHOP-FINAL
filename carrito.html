@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/FavIcon.ico" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/92e84a8749.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/stylesCarrito.css">
+    <title>Carrito de Compras   </title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg container_a">
+            <div class="container-fluid container_a">
+                <a class="navbar-brand ms-5" href="./index.html">
+                    <img class="nav_logo logo1" src="./img/Log.png" alt="Logo" width="80" />
+                    <img class="nav_logo logo2" src="./img/TitleLogo.png" alt="Logo" width="150" /></a>
+                <button class="navbar-toggler mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end align-items-center container_a"
+                    id="navbarNav">
+                    <div class="navbar-nav nav_a d-flex align-items-center">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                        <a class="nav-link" href="./jugueteria.html">Juguetería</a>
+                        <a class="nav-link" href="./farmacia.html">Farmacia</a>
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                        <a class="nav-link active fa-sharp fa-regular fa-cart-shopping shopping_cart mt-1" aria-current="page" href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="appCarrito">
+        <h1 id="tituloCarrito">Carrito de Compras</h1>
+        <div id="contenedorCardsyBotones">
+            <div id="contenedorCardsYMensaje">
+                <template v-if="carritoMascotas.length > 0" v-for= "elemento of mascotasNuevoArray" id="cardCarrito">
+                    <div class="card mb-3" style="max-width: 440px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img :src="elemento.imagen" class="img-fluid rounded-start" alt="...">
+                            </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{elemento.producto}}</h5>
+                                <p class="card-text">{{elemento.description}}</p>
+                                <h6>$: {{elemento.precio}}</h6>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </template>
+                <template v-else id="mensajeDescupado">
+                    <h1>Carrito Desocupado</h1>
+                </template>
+            </div>
+            <div id="contenedorTotalyPrecios">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Total</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Total a Pagar</h5>
+                        <p class="card-text">$: {{sumaValores}}</p>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto mb-4">
+                    <button class="btn btn-primary" type="button" v-on:click="limpiarCarrito">Limpiar Carrito</button>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Pagar
+                    </button>
+            </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Proceso de Pago</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Compra Efectuada Correctamente!
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+    <footer class="d-flex justify-content-evenly flex-wrap">
+        <section class="d-flex flex-column justify-content-start mt-3 redes">
+            <h4 class="text_footer d-flex align-self-center">Redes sociales</h4>
+            <ul class="social d-flex align-items-start flex-column">
+                <li class="fa-brands fa-instagram">
+                    <a href="https://www.instagram.com">Instagram</a>
+                </li>
+                <li class="fa-brands fa-facebook">
+                    <a href="https://www.facebook.com">Facebook</a>
+                </li>
+                <li class="fa-brands fa-whatsapp">
+                    <a href="https://www.whatsapp.com">Whatsapp</a>
+                </li>
+                <li class="fa-brands fa-youtube">
+                    <a href="https://youtube.com">Youtube</a>
+                </li>
+            </ul>
+        </section>
+        <section class="d-flex flex-column align-items-center justify-content-start horarioC">
+            <ul class="social d-flex align-items-start flex-column" style="list-style: none;">
+                <h4 class="text_footer d-flex">Visítanos</h4>
+                <li><h5 class="horario"> Dirección: Paraguay 2334 5 F.</h5></li>
+                <li><h5 class="horario"> Horario: <br> Lunes a viernes: 7:00 a 19:00. <br>
+                Sábado: 8:00 a 17:00. <br> Domingo: No hay servicio.</h5></li>
+            </ul>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/carrito.js"></script>
+</body>
+</html>
