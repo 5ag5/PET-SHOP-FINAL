@@ -11,7 +11,6 @@ const app = createApp({
             checked: [],
             ordenar: ['ordenar por precio más bajo', 'ordenar por precio más alto'],
             cargando: true,
-            details: [],
             comprarRemedios: JSON.parse( localStorage.getItem('comprarRemedios') ) || []
         }
     },
@@ -19,7 +18,15 @@ const app = createApp({
         fetch('https://mindhub-xj03.onrender.com/api/petshop')
             .then(response => response.json())
             .then(datos => {
-                this.farmacia = datos.filter(element => element.categoria == "farmacia")
+                let filtrados1=JSON.parse( localStorage.getItem('filtrados') ) || []
+                datos.map(element=>console.log(element))
+                this.farmacia=datos.filter(element=> element.categoria=="farmacia").map(el=>{
+                    let filtrados2=filtrados1?.find(elD=>elD._id==el._id)
+                    if(filtrados2){
+                        el.disponibles=filtrados2.disponibles
+                    }
+                    return el
+                })
                 this.filtrados = datos.filter(element => element.categoria == "farmacia")
                 console.log(this.farmacia)
                 this.precios = datos.map(categoria => categoria.precio)
@@ -53,6 +60,7 @@ const app = createApp({
             remedio.disponibles=remedio.disponibles-1;
             
             }
+            localStorage.setItem( 'filtrados', JSON.stringify( this.filtrados) )
         }
     },
     computed:{
