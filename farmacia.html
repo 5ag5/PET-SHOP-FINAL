@@ -18,8 +18,8 @@
         <nav class="navbar navbar-expand-lg container_a">
             <div class="container-fluid container_a">
                 <a class="navbar-brand ms-5" href="./index.html">
-                    <img class="nav_logo" src="./img/Log.png" alt="Logo" width="80" />
-                    <img class="nav_logo" src="./img/TitleLogo.png" alt="Logo" width="150" /></a>
+                    <img class="nav_logo logo1" src="./img/Log.png" alt="Logo" width="80" />
+                    <img class="nav_logo logo2" src="./img/TitleLogo.png" alt="Logo" width="150" /></a>
                 <button class="navbar-toggler mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,41 +39,29 @@
     </header>
     <main id="app" class="container">
         {{productosCompra}}
-        <h1 class="text-center text-primary">Farmacia</h1>
+        <h1 class="text-center h1_farmacia">Farmacia</h1>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3700">
-                    <img src="./img/gatitoLeche.jpg" class="d-block w-100 img">
+                    <img src="./img/perritos1.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item" data-bs-interval="3700">
-                    <img src="./img/gatoTetero.jpg" class="d-block w-100 img">
+                    <img src="./img/perritos2.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item" data-bs-interval="3700">
-                    <img src="./img/pastillaGato.jpg" class="d-block w-100 img">
-                </div>
-                <div class="carousel-item" data-bs-interval="3700">
-                    <img src="./img/peineGato.jpg" class="d-block w-100 img">
-                </div>
-                <div class="carousel-item" data-bs-interval="3700">
-                    <img src="./img/perroTetero.jpg" class="d-block w-100 img">
-                </div>
-                <div class="carousel-item" data-bs-interval="3700">
-                    <img src="./img/tabletaPulgas.jpg" class="d-block w-100 img">
-                </div>
-                <div class="carousel-item" data-bs-interval="3700">
-                    <img src="./img/peinePerro.jpg" class="d-block w-100 img">
+                    <img src="./img/perritos3.jpg" class="d-block w-100">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
         <!--radios-->
         <div class="navbar  navBarFiltros bg-body-tertiary d-flex justify-content-lg-around  mb-5 ">
@@ -94,7 +82,7 @@
             </form>
         </div>
         <!--Cards-->
-        <div class="row gap-3 justify-content-evenly mb-4">
+        <div class="row gap-3 justify-content-center mb-4">
             <template v-if="filtrados.length>0" v-for="remedio of filtrados">
                 <div v-if="remedio.disponibles>=5" class="card col-3" style="width: 18rem;">
                     <img v-bind:src="remedio.imagen" class="card-img-top cardImage" alt="...">
@@ -134,7 +122,8 @@
                                         d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                 </svg>
                             </button>
-                            <a :href="'./detallesF.html?id='+remedio._id" class="btn colorBotones tamañoBoton">Detalles</a>
+                            <a :href="'./detallesF.html?id='+remedio._id"
+                                class="btn colorBotones tamañoBoton">Detalles</a>
                         </div>
                     </div>
                 </div>

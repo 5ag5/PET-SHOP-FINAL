@@ -186,6 +186,12 @@ font-size: 2.5rem;
 .carousel-item img{
 height: 30vh;
 }
+.logo1{
+width: 60px;
+}
+.logo2{
+width: 80px ;
+}
 }
 @media  (max-width:549px){
     .colorFondoDetailles{
