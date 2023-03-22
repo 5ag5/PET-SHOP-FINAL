@@ -69,6 +69,21 @@ footer{
 background-color: rgb(0, 183, 255);
 min-height: 15vh;
 }
+.h1_jugueteria{
+    text-align: center;
+    margin: 1rem;
+    font-weight: bold;
+    color: rgb(0, 217, 255);
+    text-shadow: 1px 5px 5px rgba(0, 0, 0, 0.473);
+    -webkit-text-stroke: 1px white;
+    font-size: 3rem;
+    transition: 0.2s;
+    background-color: aliceblue;
+    }
+    .h1_jugueteria:hover{
+    color:white ;
+    -webkit-text-stroke: 1px rgb(0, 217, 255);
+    }
 .cardImage{
     height: 16rem;
     width: 16rem;
@@ -164,6 +179,12 @@ padding: 0;
 }
 .social a{
 font-size: 0.9rem;
+}
+.h1_jugueteria{
+font-size: 2.5rem;
+}
+.carousel-item img{
+height: 30vh;
 }
 }
 @media  (max-width:549px){

@@ -79,8 +79,9 @@ min-height: 15vh;
 #contenedorCardsyBotones{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem;;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: 1rem;
 }
 
 #contenedorCardsYMensaje{
@@ -94,6 +95,7 @@ min-height: 15vh;
 #contenedorTotalyPrecios{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 30%;
 }
@@ -101,6 +103,17 @@ min-height: 15vh;
 #tituloCarrito{
 text-align: center;
 margin: 1rem;
+font-weight: bold;
+color: rgb(0, 217, 255);
+text-shadow: 1px 5px 5px rgba(0, 0, 0, 0.473);
+-webkit-text-stroke: 1px white;
+font-size: 3rem;
+transition: 0.2s;
+background-color: aliceblue;
+}
+#tituloCarrito:hover{
+color:white ;
+-webkit-text-stroke: 1px rgb(0, 217, 255);
 }
 
 #mensajeDescupado{
@@ -151,5 +164,7 @@ padding: 0;
 .social a{
 font-size: 0.9rem;
 }
-
+#tituloCarrito{
+font-size: 2.1rem;
+}
 }

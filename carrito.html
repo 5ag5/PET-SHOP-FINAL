@@ -48,14 +48,14 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{elemento.producto}}</h5>
                                 <p class="card-text">{{elemento.description}}</p>
-                                <h6>$: {{elemento.precio}}</h6>
+                                <h6>Precio: ${{elemento.precio}}</h6>
                             </div>
                         </div>
                         </div>
                     </div>
                 </template>
                 <template v-else id="mensajeDescupado">
-                    <h1>Carrito Desocupado</h1>
+                    <h2 class="text-center">Carrito Desocupado</h2>
                 </template>
             </div>
             <div id="contenedorTotalyPrecios">
@@ -66,8 +66,8 @@
                         <p class="card-text">$: {{sumaValores}}</p>
                     </div>
                 </div>
-                <div class="d-grid gap-2 col-6 mx-auto mb-4">
-                    <button class="btn btn-primary" type="button" v-on:click="limpiarCarrito">Limpiar Carrito</button>
+                <div class="d-grid gap-2 col-6 mx-auto d-flex flex-column align-items-center mb-4">
+                    <button class="btn btn-info text-light" type="button" v-on:click="limpiarCarrito">Limpiar Carrito</button>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Pagar
@@ -84,10 +84,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                Compra Efectuada Correctamente!
+                ¡Compra Efectuada Correctamente!
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
             </div>
