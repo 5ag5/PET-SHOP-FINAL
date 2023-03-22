@@ -81,14 +81,14 @@
           <template v-for="precio of  ordenar">
           <div class="form-check form-check-inline">
             <label class="form-check-label" ></label>
-              <input class="form-check-input"  @change="  filtroCruzado" v-model="checked" type="radio"  :value='precio'>
+              <input class="form-check-input colorRadio"  @change="  filtroCruzado" v-model="checked" type="radio"  :value='precio'>
               {{precio}}
             </label>
           </div>
         </template>
         </div> 
         <form class="d-flex" role="search" id="search-title">
-          <input class="form-control me-2 colorFuchsia" type="search" aria-label="Search" v-model="busqueda" @keyup>
+          <input class="form-control me-2 colorRadio" type="search" aria-label="Search" v-model="busqueda" @keyup>
           <button class="btn btn-outline-info" type="submit" v-on:click.prevent="filtroCruzado">Search</button>
         </form>
       </div>
