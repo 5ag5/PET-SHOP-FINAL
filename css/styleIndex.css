@@ -160,6 +160,9 @@ font-size: 0.9rem;
 .ubi{
     width: 50vw;
     height: 50vh;
+    border-radius: 20px;
+    border: 1px cyan solid;
+    background-color: aquamarine;
 }
 
 .mapa {
