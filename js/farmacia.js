@@ -27,6 +27,8 @@ const app = createApp({
                     }
                     return el
                 })
+
+                console.log(this.farmacia)
                 this.filtrados = datos.filter(element => element.categoria == "farmacia")
                 console.log(this.farmacia)
                 this.precios = datos.map(categoria => categoria.precio)

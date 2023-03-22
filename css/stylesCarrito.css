@@ -122,6 +122,12 @@ color:white ;
     text-align: center;
 }
 
+#x-icon{
+    object-fit: contain;
+    height: 10%;
+    width: 10%;
+}
+
 @media only screen and (max-width: 991px) {
 
 .nav-link{

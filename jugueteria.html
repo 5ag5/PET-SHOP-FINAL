@@ -38,8 +38,7 @@
         </nav>
     </header>
     <main id="app" class="container">
-      
-      {{productosCompra}}
+        {{productosCompra}}
       <h1 class="text-center h1_jugueteria">Juguetería</h1> 
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -66,9 +65,9 @@
         </button>
     </div>
         <!--radios-->
-      <div class="navbar  navBarFiltros bg-body-tertiary d-flex justify-content-lg-around  mb-5 "> 
+    <div class="navbar  navBarFiltros bg-body-tertiary d-flex justify-content-lg-around  mb-5 "> 
         <div class=" d-flex flex-lg-row justify-content-lg-around  flex-wrap navBarFiltrosRadios" id="checkBox">
-          <template v-for="precio of  ordenar">
+        <template v-for="precio of  ordenar">
           <div class="form-check form-check-inline">
             <label class="form-check-label" ></label>
               <input class="form-check-input colorRadio"  @change="  filtroCruzado" v-model="checked" type="radio"  :value='precio'>
@@ -93,11 +92,11 @@
                     <p class="card-text text-center">${{juguete.precio}}</p>
                     <div class="d-flex justify-content-between">
                         <button type="button" class="btn colorBotones"  v-on:click="seleccionarProductos(juguete._id)">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart colorCarrito" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart colorCarrito" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                          </svg>
-                          </button>
-                          <a :href="'./detalles.html?id='+juguete._id" class="btn btn-info tamañoBoton">Detalles</a>
+                        </svg>
+                        </button>
+                        <a :href="'./detalles.html?id='+juguete._id" class="btn btn-info tamañoBoton">Detalles</a>
                     </div>
                     </div>
                 </div>
@@ -114,23 +113,23 @@
                     <p class="card-text text-center">${{juguete.precio}}</p>
                     <div class="d-flex justify-content-between">
                         <button type="button" class="btn colorBotones"  v-on:click="seleccionarProductos(juguete._id)">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart colorCarrito" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart colorCarrito" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                          </svg>
+                        </svg>
                         </button>
-                          <a :href="'./detalles.html?id='+juguete._id" class="btn btn-info tamañoBoton">Detalles</a>
+                        <a :href="'./detalles.html?id='+juguete._id" class="btn btn-info tamañoBoton">Detalles</a>
                     </div>
                     </div>
-                     </div>
+                    </div>
                     </div>
             </template>
             <template v-else-if="cargando">
-              <h5 class="text-center">loading...</h5>
-          </template>
-          <template v-else>
-              <h5 class="text-center">no hay coincidencias para tu búsqueda</h5>
-          </template>  
-              
+            <h5 class="text-center">loading...</h5>
+        </template>
+        <template v-else>
+            <h5 class="text-center">no hay coincidencias para tu búsqueda</h5>
+        </template>  
+        
         </div>
     </main>
     <footer class="d-flex justify-content-evenly flex-wrap">
