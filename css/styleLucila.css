@@ -101,10 +101,8 @@ min-height: 15vh;
     height: 2.5rem;
 }
 .carousel-item img{
-    height: 250px;
-    width: 250px;
+    height: 70vh;
     object-fit: cover;
-    /*margin-left: 14px;*/
   
 }
 .img{
