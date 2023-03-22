@@ -171,6 +171,7 @@ font-size: 0.9rem;
         margin-top: 10rem;
         flex-direction: column;
         width: 19rem;
+        align-items: center;
         
     }
     .imgDetalles{
@@ -196,7 +197,8 @@ font-size: 0.9rem;
 @media (min-width:550px) and (max-width:835px){
     .colorFondoDetailles{
         width: 30rem;
-        
+        align-items: center;
+        flex-direction: column;
     }
     .imgDetalles{
         height: 220px;
@@ -219,5 +221,8 @@ font-size: 0.9rem;
     .tamañoBoton{
         height: 2.5rem  !important;
     }
-    
+    .colorFondoDetailles{
+        align-items: center;
+        
+    }
 }
