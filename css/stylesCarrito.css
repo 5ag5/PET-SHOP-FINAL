@@ -89,6 +89,8 @@ min-height: 15vh;
     justify-content: center;
     align-items: center;
     width: 40%;
+    padding: 1rem;
+    background-color:rgb(255, 255, 255);
 }
 
 #contenedorTotalyPrecios{
